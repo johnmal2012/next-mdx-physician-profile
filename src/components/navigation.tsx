@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 import {
   Sheet,
   SheetContent,
+  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -159,15 +160,19 @@ export default function Navigation() {
                 border-l
                 bg-white
                 p-6
+                h-full
+                overflow-y-auto
+                pb-[env(safe-area-inset-bottom)]
                 "
             >
-              <SheetHeader>
+              <SheetHeader className="pb-2">
                 <SheetTitle className="text-lg font-semibold tracking-tight text-slate-900">
                   Hudson Foot & Ankle
                 </SheetTitle>
+                <SheetDescription>Dr. Nikki Lam</SheetDescription>
               </SheetHeader>
 
-              <nav className="mt-10 flex flex-col gap-3">
+              <nav className="mt-2 flex flex-col gap-2">
                 {navItems.map((item) => {
                   const isActive = activeSection === item.href.replace('#', '');
 

@@ -23,6 +23,7 @@ export default function HeroSection({ content }: Props) {
             alt={physicianData.name}
             width={600}
             height={700}
+            priority
             className="rounded-3xl object-cover shadow-2xl"
           />
         </div>
