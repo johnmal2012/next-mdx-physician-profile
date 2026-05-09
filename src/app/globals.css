@@ -24,3 +24,24 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.prose table th,
+.prose table td {
+  border: 1px solid #e2e8f0;
+  padding: 0.75rem;
+}
+
