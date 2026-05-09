@@ -35,36 +35,23 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 140;
+      const sections = navItems.map((item) => ({
+        id: item.href.replace('#', ''),
+        element: document.querySelector(item.href) as HTMLElement | null,
+      }));
 
-      // Contact section visibility detection
-      const contactSection = document.querySelector('#contact') as HTMLElement;
+      const scrollPosition = window.innerHeight * 0.35;
 
-      if (contactSection) {
-        const rect = contactSection.getBoundingClientRect();
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
 
-        if (
-          rect.top <= window.innerHeight * 0.45 &&
-          rect.bottom >= window.innerHeight * 0.25
-        ) {
-          setActiveSection('contact');
-          return;
-        }
-      }
+        if (!section.element) continue;
 
-      for (let i = navItems.length - 1; i >= 0; i--) {
-        const item = navItems[i];
+        const rect = section.element.getBoundingClientRect();
 
-        const section = document.querySelector(item.href) as HTMLElement;
-
-        if (section) {
-          const offsetTop = section.offsetTop;
-
-          if (scrollPosition >= offsetTop) {
-            setActiveSection(item.href.replace('#', ''));
-
-            break;
-          }
+        if (rect.top <= scrollPosition) {
+          setActiveSection(section.id);
+          break;
         }
       }
     };
@@ -79,7 +66,7 @@ export default function Navigation() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b bg-white/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b bg-blue-100/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <div className="flex min-w-0 items-center gap-3">
           <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-blue-100">
@@ -88,11 +75,11 @@ export default function Navigation() {
 
           <div className="min-w-0">
             <h1 className="truncate text-base font-bold text-slate-900 sm:text-lg">
-              <Link href="#hero">Dr. Nikki Lam</Link>
+              <Link href="/">Dr. Nikki Lam</Link>
             </h1>
 
             <p className="truncate text-[11px] text-slate-500 sm:text-xs">
-              <Link href="#hero">Foot & Ankle Specialist</Link>
+              <Link href="/">Foot & Ankle Specialist</Link>
             </p>
           </div>
         </div>
