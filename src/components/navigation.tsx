@@ -169,7 +169,9 @@ export default function Navigation() {
                 <SheetTitle className="text-lg font-semibold tracking-tight text-slate-900">
                   Hudson Foot & Ankle
                 </SheetTitle>
-                <SheetDescription>Dr. Nikki Lam</SheetDescription>
+                <SheetDescription className="text-sm text-slate-500">
+                  Dr. Nikki Lam
+                </SheetDescription>
               </SheetHeader>
 
               <nav className="mt-2 flex flex-col gap-2">
