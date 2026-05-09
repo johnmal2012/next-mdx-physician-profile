@@ -88,11 +88,11 @@ export default function Navigation() {
 
           <div className="min-w-0">
             <h1 className="truncate text-base font-bold text-slate-900 sm:text-lg">
-              Dr. Nikki Lam
+              <Link href="#hero">Dr. Nikki Lam</Link>
             </h1>
 
             <p className="truncate text-[11px] text-slate-500 sm:text-xs">
-              Foot & Ankle Specialist
+              <Link href="#hero">Foot & Ankle Specialist</Link>
             </p>
           </div>
         </div>
