@@ -2,6 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
+// The absolute path to where you ran the node command (typically your project root)
+// Automatically adds the correct path separator for the operating system (/ for Unix/Mac, \ for Windows)
 const contentPath = path.join(process.cwd(), 'src/content/physician');
 
 export function getMdxContent(filename: string) {

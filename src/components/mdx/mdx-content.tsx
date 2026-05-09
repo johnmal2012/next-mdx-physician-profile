@@ -72,14 +72,14 @@ export default function MdxContent({
 
         thead: (props) => (
           <thead
-            className="bg-slate-100"
+            className="bg-slate-200"
             {...props}
           />
         ),
 
         th: (props) => (
           <th
-            className="border bg-slate-200 border-slate-100 px-4 py-3 text-left font-semibold"
+            className="border border-slate-100 px-4 py-3 text-left font-semibold"
             {...props}
           />
         ),
@@ -89,6 +89,7 @@ export default function MdxContent({
             {...props}
           />
         ),
+        // to bold first column: first:font-semibold
         td: (props) => (
           <td
             className="border border-slate-200 px-4 py-3"

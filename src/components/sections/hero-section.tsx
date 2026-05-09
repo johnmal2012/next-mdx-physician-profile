@@ -30,8 +30,19 @@ export default function HeroSection({ content }: Props) {
         <Card className="rounded-3xl border-0 p-8 shadow-xl">
           <div className="space-y-6">
             <div className="space-y-5">
-              <Badge className="rounded-full px-4 py-1 text-xs tracking-wide">
-                Board-Certified Foot & Ankle Specialist
+              <Badge className=" h-auto
+                rounded-full
+                border
+                border-blue-200
+                bg-blue-50
+                px-4
+                py-1
+                text-xs
+                font-medium
+                tracking-wide
+                text-blue-700
+                hover:bg-blue-100">
+                {physicianData.boardSpecialty}
               </Badge>
 
               <div>

@@ -1,3 +1,5 @@
+import { physicianData } from "@/data/physician";
+
 export default function FooterSection() {
   const currentYear = new Date().getFullYear();
   return (
@@ -5,11 +7,11 @@ export default function FooterSection() {
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 md:flex-row">
         <div>
           <h3 className="text-lg font-semibold">
-            Hudson Foot & Ankle Institute
+            {physicianData.clinicName}
           </h3>
 
           <p className="text-sm text-gray-500">
-            Advanced Foot & Ankle Care in New York, NY
+            {physicianData.clinicAddress}
           </p>
         </div>
 
