@@ -17,7 +17,7 @@ export default function HeroSection({ content }: Props) {
     <section id="hero" className="scroll-mt-28 bg-slate-50 px-6 py-12
     ">
       <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2 md:items-center">
-        <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white">
+        <div className="relative w-64 h-64 mx-auto md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white">
           <Image
             src={physicianData.image}
             alt={physicianData.name}
