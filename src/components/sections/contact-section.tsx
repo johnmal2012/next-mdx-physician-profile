@@ -1,6 +1,7 @@
 import { Card } from '@/components/ui/card';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { physicianData } from '@/data/physician';
+import { headingData } from '@/data/heading';
 
 export default function ContactSection() {
   return (
@@ -8,7 +9,7 @@ export default function ContactSection() {
     ">
       <div className="mx-auto max-w-5xl">
         <Card className="rounded-3xl p-10 shadow-xl">
-          <h2 className="mb-10 text-3xl font-bold">Contact Information</h2>
+          <h2 className="mb-10 text-3xl font-bold">{headingData.contact}</h2>
 
           <div className="grid gap-8 md:grid-cols-3">
             <div className="space-y-3">

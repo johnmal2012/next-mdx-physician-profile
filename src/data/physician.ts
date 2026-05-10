@@ -8,5 +8,5 @@ export const physicianData = {
   clinicAddress: 'Advanced Foot & Ankle Care in New York, NY',
   phone: '(718) 123-4567',
   email: 'info@hudsonfootankle.com',
-  address: '1 Centre Street, New York, NY 10007',
+  address: '4802 Tenth Avenue Brooklyn, NY 11219',
 };

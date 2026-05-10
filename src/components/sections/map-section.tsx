@@ -1,4 +1,6 @@
 import { Card } from '@/components/ui/card';
+import { physicianData } from '@/data/physician';
+import { headingData } from '@/data/heading';
 
 export default function MapSection() {
   return (
@@ -15,18 +17,18 @@ export default function MapSection() {
         <Card className="overflow-hidden rounded-3xl shadow-xl">
           <div className="border-b px-8 py-6">
             <h2 className="text-3xl font-bold text-slate-900">
-              Office Location
+              {headingData.location}
             </h2>
 
             <p className="mt-2 text-slate-600">
-              1 Centre Street, New York, NY 10007
+              {physicianData.address}
             </p>
           </div>
 
           <div className="h-112.5 w-full">
             <iframe
               title="Office Location Map"
-              src="https://www.google.com/maps?q=1+Centre+Street,+New+York,+NY+10007&output=embed"
+              src={`https://www.google.com/maps?q=${encodeURIComponent(physicianData.address)}&output=embed`}
               width="100%"
               height="100%"
               allowFullScreen
