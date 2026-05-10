@@ -140,7 +140,8 @@ export default function Navigation() {
                     text-slate-700
                     hover:bg-slate-100
                     hover:text-slate-900
-                    focus-visible:ring-0"
+                    focus-visible:ring-0
+                    cursor-pointer"
               >
                 {/* <Menu className="h-6 w-6" strokeWidth={2.5} /> */}
                 <div className="flex flex-col gap-1.5">
@@ -157,7 +158,7 @@ export default function Navigation() {
                 w-50
                 max-w-55
                 border-l
-                bg-white
+                bg-stone-100
                 p-6
                 h-full
                 overflow-y-auto
