@@ -7,4 +7,6 @@ export const headingData = {
   insurance: 'Insurance Accepted',
   location: 'Office Location',
   contact: 'Contact Information',
+  linkName: 'Foot Care',
+  footCareLink: 'https://www.footcaremd.org/',
 };

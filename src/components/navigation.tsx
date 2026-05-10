@@ -17,6 +17,8 @@ import {
 
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { physicianData } from '@/data/physician';
+import { headingData } from '@/data/heading';
 
 const navItems = [
   { label: 'About', href: '#hero' },
@@ -85,11 +87,11 @@ export default function Navigation() {
 
           <div className="min-w-0">
             <h1 className="truncate text-base font-bold text-slate-900 sm:text-lg">
-              <Link href="#hero">Dr. Nikki Lam</Link>
+              <Link href="#hero">{physicianData.logo}</Link>
             </h1>
 
             <p className="truncate text-[11px] text-slate-500 sm:text-xs">
-              <Link href="#hero">Foot & Ankle Specialist</Link>
+              <Link href="#hero">{physicianData.specialty}</Link>
             </p>
           </div>
         </div>
@@ -115,12 +117,12 @@ export default function Navigation() {
             );
           })}
           <Link
-            href="https://www.footcaremd.org/"
+            href={headingData.footCareLink}
             target="_blank"
             rel="noopener noreferrer"
             className="whitespace-nowrap font-medium text-sm hover:text-blue-700 hover:underline underline-offset-2 decoration-1 hover:decoration-2"
           >
-            Foot Care
+            {headingData.linkName}
           </Link>
 
           {/* <Button className="ml-3 rounded-full">Request Appointment</Button> */}
@@ -164,10 +166,10 @@ export default function Navigation() {
             >
               <SheetHeader className="pb-2">
                 <SheetTitle className="text-lg font-semibold tracking-tight text-slate-900">
-                  Hudson Foot & Ankle
+                  {physicianData.clinicName}
                 </SheetTitle>
                 <SheetDescription className="text-sm text-slate-500">
-                  Dr. Nikki Lam
+                  {physicianData.logo}
                 </SheetDescription>
               </SheetHeader>
 
@@ -191,12 +193,12 @@ export default function Navigation() {
                   );
                 })}
                 <Link
-                  href="https://www.footcaremd.org/"
+                  href={headingData.footCareLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="not-first:rounded-xl px-4 py-3 text-base font-medium transition-all text-slate-700 hover:bg-blue-50 hover:text-blue-600 hover:underline underline-offset-2 decoration-1 hover:decoration-2"
                 >
-                  Foot Care
+                  {headingData.linkName}
                 </Link>
                 {/* <Button className="mt-6 rounded-full">
                   Request Appointment
