@@ -46,7 +46,7 @@ export default function Navigation() {
         document.documentElement.scrollHeight - 10;
 
       if (isBottom) {
-        setActiveSection('contact');
+        setActiveSection(sections[sections.length - 1].id);
         return;
       }
 
