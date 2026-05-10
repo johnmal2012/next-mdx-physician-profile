@@ -142,8 +142,8 @@ export default function Navigation() {
             <SheetContent
               side="right"
               className="
-                w-60
-                max-w-60
+                w-50
+                max-w-55
                 border-l
                 bg-white
                 p-6
