@@ -40,6 +40,16 @@ export default function Navigation() {
         element: document.querySelector(item.href) as HTMLElement | null,
       }));
 
+      // Detect bottom of page
+      const isBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 10;
+
+      if (isBottom) {
+        setActiveSection('contact');
+        return;
+      }
+
       const scrollPosition = window.innerHeight * 0.35;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -75,11 +85,11 @@ export default function Navigation() {
 
           <div className="min-w-0">
             <h1 className="truncate text-base font-bold text-slate-900 sm:text-lg">
-              <Link href="/">Dr. Nikki Lam</Link>
+              <Link href="#hero">Dr. Nikki Lam</Link>
             </h1>
 
             <p className="truncate text-[11px] text-slate-500 sm:text-xs">
-              <Link href="/">Foot & Ankle Specialist</Link>
+              <Link href="#hero">Foot & Ankle Specialist</Link>
             </p>
           </div>
         </div>
