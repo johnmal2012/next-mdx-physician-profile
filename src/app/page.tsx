@@ -11,6 +11,8 @@ import ContactSection from '@/components/sections/contact-section';
 import FooterSection from '@/components/sections/footer-section';
 import MapSection from '@/components/sections/map-section';
 import { getMdxContent } from '@/lib/mdx';
+// import { Button } from '@/components/ui/button';
+// import { DESTRUCTION } from 'dns';
 
 export default function HomePage() {
   const hero = getMdxContent('hero.mdx');
